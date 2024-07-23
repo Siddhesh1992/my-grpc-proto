@@ -1,5 +1,5 @@
 # Replace this with your own github.com/<username>/<repository>
-GO_MODULE := github.com/Siddhesh1992/grpc-with-go-golang/my-grpc-proto
+GO_MODULE := github.com/timpamungkas/my-grpc-proto
 
 .PHONY: clean
 clean:
@@ -16,7 +16,9 @@ endif
 protoc-go:
 	protoc --go_opt=module=${GO_MODULE} --go_out=. \
 	--go-grpc_opt=module=${GO_MODULE} --go-grpc_out=. \
-	./proto/hello/*.proto ./proto/payment/*.proto ./proto/transaction/*.proto
+	./proto/hello/*.proto ./proto/payment/*.proto ./proto/transaction/*.proto \
+	./proto/bank/*.proto ./proto/bank/type/*.proto \
+	./proto/resiliency/*.proto \
 
 .PHONY: build
 build: clean protoc-go
@@ -24,7 +26,7 @@ build: clean protoc-go
 
 .PHONY: pipeline-init
 pipeline-init:
-	sudo apt-get install -y protobuf-compiler
+	sudo apt-get install -y protobuf-compiler golang-goprotobuf-dev
 	go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
