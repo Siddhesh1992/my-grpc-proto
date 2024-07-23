@@ -8,6 +8,7 @@ option go_package = "github.com/Siddhesh1992/grpc-with-go-golang/my-grpc-proto/p
 
 message HelloRequest { 
   string name = 1;
+  uint32 age = 16;
 }
 
 message HelloResponse { 
