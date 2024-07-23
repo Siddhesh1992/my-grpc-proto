@@ -61,6 +61,7 @@ protoc-go-gateway:
 	./proto/resiliency/*.proto
 
 
+
 .PHONY: protoc-openapiv2-gateway
 protoc-openapiv2-gateway:
 	protoc -I . --openapiv2_out ./protogen/gateway/openapiv2 \
