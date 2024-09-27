@@ -1,4 +1,4 @@
-github.com/Siddhesh1992/grpc-with-go-golang/my-grpc-proto
+github.com/Siddhesh1992/grpc-golang-product
 
 
 make file

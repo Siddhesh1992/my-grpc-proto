@@ -1,5 +1,5 @@
 # Replace this with your own github.com/<username>/<repository>
-GO_MODULE := github.com/Siddhesh1992/grpc-with-go-golang/my-grpc-proto
+GO_MODULE := github.com/Siddhesh1992/grpc-golang-product
 
 .PHONY: clean
 clean:
