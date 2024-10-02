@@ -7,7 +7,7 @@
 package payment
 
 import (
-	transaction "github.com/Siddhesh1992/grpc-golang-product/protogen/go/transaction"
+	transaction "github.com/Siddhesh1992/my-grpc-proto/protogen/go/transaction"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
